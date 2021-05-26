@@ -6,7 +6,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new Fibbonachi();
+            ITestable test = new Palindrome();
             test.Test();
             Console.ReadLine();
 
