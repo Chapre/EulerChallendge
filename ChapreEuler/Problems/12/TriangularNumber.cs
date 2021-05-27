@@ -13,24 +13,42 @@ namespace ChapreEuler.Problems._12
             //const int n = 7;
             //int term = GetTriangularTerm(n);
             //Console.WriteLine($"{n} ==> {term}, {GetDivisorsCount(term)}");
-            for (int n = 1;; n++)
+
+            //for (ulong n = 1; ; n++)
+            //{
+            //    ulong term = GetTriangularTerm(n);
+            //    int div = GetDivisorsCount(term);
+            //    if (n % 1 == 0)
+            //    {
+            //        Console.WriteLine($"{n} ==> {term}, {div}");
+            //    }
+
+            //    if (div >= 5)
+            //    {
+            //        Console.WriteLine($"{n} ==> {term}, {div}");
+            //        break;
+            //    }
+            //}
+
+            ulong number = 0;
+            ulong i = 1;
+
+            while (GetDivisorsCount(number) < 500)
             {
-                int term = GetTriangularTerm(n);
-                int div = GetDivisorsCount(term);
-                Console.WriteLine($"{n} ==> {term}, {div}");
-                if (div>=500)
-                {
-                    break;
-                }
+                number += i;
+                i++;
+
             }
+
+            Console.WriteLine(number);
         }
 
-        public int GetDivisorsCount(long value)
+        public int GetDivisorsCount(ulong value)
         {
             int count = 0;
             if (value == 1)
                 return 1;
-            for (int i = 1; i < value; i++)
+            for (uint i = 1; i < value; i++)
             {
                 if (i > value / 2)
                 {
@@ -40,22 +58,23 @@ namespace ChapreEuler.Problems._12
                 if (value % i == 0)
                 {
                     count++;
+                    value = value / i;
                 }
             }
 
             return count;
         }
 
-        int GetTriangularTerm(int n)
+        ulong GetTriangularTerm(ulong n)
         {
 
-            int termCount = 0;
+            ulong termCount = 0;
             while (true)
             {
                 termCount++;
-                int limit = termCount;
-                int sum = 0;
-                for (int i = 1; i <= limit; i++)
+                ulong limit = termCount;
+                ulong sum = 0;
+                for (ulong i = 1; i <= limit; i++)
                 {
                     sum = sum + i;
                 }
