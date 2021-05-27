@@ -37,7 +37,8 @@ namespace ChapreEuler.Problems._11
             {
                 var right = GetRightProduct(grid, i, 4);
                 var  bottom = GetBottomProduct(grid, i, 4);
-                var diag = GetDiagonalProduct(grid, i, 4);
+                var diag = GetDiagonalDownProduct(grid, i, 4);
+                var diag2 = GetDiagonalUpProduct(grid, i, 4);
                 if (right > maxProd)
                 {
                     maxProd = right;
@@ -54,7 +55,14 @@ namespace ChapreEuler.Problems._11
                 {
                     maxProd = diag;
                     
-                    Console.WriteLine($"Diag <{i}> ---> {maxProd}");
+                    Console.WriteLine($"Diag Down<{i}> ---> {maxProd}");
+                }
+
+                if (diag2 > maxProd)
+                {
+                    maxProd = diag2;
+
+                    Console.WriteLine($"Diag Up<{i}> ---> {maxProd}");
                 }
 
                 //Console.WriteLine($"rbd <{i}> ---> {right},{bottom},{diag}");
@@ -89,7 +97,7 @@ namespace ChapreEuler.Problems._11
             return prod;
         }
 
-        long GetDiagonalProduct(int[] grid, int startIndex, int count)
+        long GetDiagonalDownProduct(int[] grid, int startIndex, int count)
         {
             long prod = 1;
             var index = startIndex;
@@ -100,6 +108,22 @@ namespace ChapreEuler.Problems._11
                     return 0;
                 prod *= grid[index];
                 index = index + 20 + 1;
+            }
+
+            return prod;
+        }
+
+        long GetDiagonalUpProduct(int[] grid, int startIndex, int count)
+        {
+            long prod = 1;
+            var index = startIndex;
+            for (int i = 0; i < count; i++)
+            {
+
+                if (index<0 || index >= grid.Length)
+                    return 0;
+                prod *= grid[index];
+                index = index - 20 + 1;
             }
 
             return prod;
