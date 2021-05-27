@@ -10,8 +10,8 @@ namespace ChapreEuler.Problems._17
     {
         public void Test()
         {
-            //RawTest();
-            FormattedTest();
+            RawTest();
+            //FormattedTest();
         }
 
         private void FormattedTest()
@@ -73,9 +73,22 @@ namespace ChapreEuler.Problems._17
                 {
                     sb.Append("one thousand");
                 }
+
+                sb.AppendLine();
             }
 
-            Console.WriteLine(sb.Length);
+            
+            var letters = sb.ToString();
+            int count = 0;
+            for (int i = 0; i < letters.Length; i++)
+            {
+                if (letters[i] == ' ' || letters[i] == '-' || letters[i] == 0  || char.IsWhiteSpace(letters[i]))
+                    continue;
+                count++;
+            }
+
+            Console.WriteLine(letters);
+            Console.WriteLine(count);
         }
 
         private string GetHundredths(int hundredth)
@@ -87,22 +100,27 @@ namespace ChapreEuler.Problems._17
             sb.Append(GetDigit(hundredth / 100));
             sb.Append(' ');
             sb.Append("hundred");
-            sb.Append(" and ");
             var part = hundredth % 100;
-            if (part >= 1 && part < 10)
+            if (part > 0)
             {
-                sb.Append(GetDigit(part));
+                sb.Append(" and ");
+
+                if (part >= 1 && part < 10)
+                {
+                    sb.Append(GetDigit(part));
+                }
+
+                if (part >= 10 && part < 20)
+                {
+                    sb.Append(GetTenth(part));
+                }
+
+                if (part >= 20 && part < 100)
+                {
+                    sb.Append(GetTenth2(part));
+                }
             }
 
-            if (part >= 10 && part < 20)
-            {
-                sb.Append(GetTenth(part));
-            }
-
-            if (part >= 20 && part < 100)
-            {
-                sb.Append(GetTenth2(part));
-            }
 
             return sb.ToString();
         }
