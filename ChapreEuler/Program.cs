@@ -4,6 +4,8 @@ using ChapreEuler.Problems._11;
 using ChapreEuler.Problems._12;
 using ChapreEuler.Problems._13;
 using ChapreEuler.Problems._14;
+using ChapreEuler.Problems._16;
+using ChapreEuler.Problems._17;
 using ChapreEuler.Problems._6;
 using ChapreEuler.Problems._7;
 using ChapreEuler.Problems._8;
@@ -15,7 +17,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new CollatzSequence();
+            ITestable test = new NumberLetterCounts();
             test.Test();
             Console.ReadLine();
 
