@@ -1,6 +1,7 @@
 ﻿using System;
 using ChapreEuler.Problems._10;
 using ChapreEuler.Problems._11;
+using ChapreEuler.Problems._12;
 using ChapreEuler.Problems._6;
 using ChapreEuler.Problems._7;
 using ChapreEuler.Problems._8;
@@ -12,7 +13,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new ProductGrid();
+            ITestable test = new TriangularNumber();
             test.Test();
             Console.ReadLine();
 
