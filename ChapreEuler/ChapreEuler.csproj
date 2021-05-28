@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Problems\NewFolder1\" />
+    <Compile Remove="Problems\NewFolder1\**" />
+    <EmbeddedResource Remove="Problems\NewFolder1\**" />
+    <None Remove="Problems\NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Problems\27\" />
   </ItemGroup>
 

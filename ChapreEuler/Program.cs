@@ -1,6 +1,8 @@
 ﻿using System;
 using ChapreEuler.Problems;
 using ChapreEuler.Problems._26;
+using ChapreEuler.Problems._28;
+using ChapreEuler.Problems._7;
 
 namespace ChapreEuler
 {
@@ -8,7 +10,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new QuadraticPrimes();
+            ITestable test = new NumberSpiralDiagonal();
             test.Test();
             Console.ReadLine();
         }
