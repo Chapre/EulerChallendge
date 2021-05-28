@@ -1,4 +1,5 @@
 ﻿using System;
+using ChapreEuler.Problems;
 using ChapreEuler.Problems._10;
 using ChapreEuler.Problems._11;
 using ChapreEuler.Problems._12;
@@ -17,7 +18,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new NumberLetterCounts();
+            ITestable test = new MaximumPathSum();
             test.Test();
             Console.ReadLine();
 
