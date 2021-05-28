@@ -7,7 +7,8 @@ using ChapreEuler.Problems._13;
 using ChapreEuler.Problems._14;
 using ChapreEuler.Problems._16;
 using ChapreEuler.Problems._17;
-using ChapreEuler.Problems._19;
+using ChapreEuler.Problems._20;
+using ChapreEuler.Problems._21;
 using ChapreEuler.Problems._6;
 using ChapreEuler.Problems._7;
 using ChapreEuler.Problems._8;
@@ -19,10 +20,9 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new CountingSundays();
+            ITestable test = new AmicableNumbers();
             test.Test();
             Console.ReadLine();
-
         }
     }
 }
