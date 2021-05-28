@@ -12,6 +12,7 @@ using ChapreEuler.Problems._21;
 using ChapreEuler.Problems._22;
 using ChapreEuler.Problems._23;
 using ChapreEuler.Problems._24;
+using ChapreEuler.Problems._25;
 using ChapreEuler.Problems._6;
 using ChapreEuler.Problems._7;
 using ChapreEuler.Problems._8;
@@ -23,7 +24,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new LexicographicPermutations();
+            ITestable test = new FibonacciNumberDigits();
             test.Test();
             Console.ReadLine();
         }
