@@ -9,4 +9,10 @@
     <Folder Include="Problems\NewFolder1\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Problems\22\names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

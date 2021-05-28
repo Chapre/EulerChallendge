@@ -9,6 +9,8 @@ using ChapreEuler.Problems._16;
 using ChapreEuler.Problems._17;
 using ChapreEuler.Problems._20;
 using ChapreEuler.Problems._21;
+using ChapreEuler.Problems._22;
+using ChapreEuler.Problems._23;
 using ChapreEuler.Problems._6;
 using ChapreEuler.Problems._7;
 using ChapreEuler.Problems._8;
@@ -20,7 +22,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new AmicableNumbers();
+            ITestable test = new NonAbundantSums();
             test.Test();
             Console.ReadLine();
         }
