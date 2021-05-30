@@ -8,6 +8,12 @@ using ChapreEuler.Problems._31;
 using ChapreEuler.Problems._32;
 using ChapreEuler.Problems._34;
 using ChapreEuler.Problems._35;
+using ChapreEuler.Problems._36;
+using ChapreEuler.Problems._37;
+using ChapreEuler.Problems._38;
+using ChapreEuler.Problems._39;
+using ChapreEuler.Problems._40;
+using ChapreEuler.Problems._41;
 using ChapreEuler.Problems._7;
 
 namespace ChapreEuler
@@ -16,7 +22,7 @@ namespace ChapreEuler
     {
         static void Main(string[] args)
         {
-            ITestable test = new CircularPrimes();
+            ITestable test = new PandigitalPrime();
             test.Test();
             Console.ReadLine();
         }
