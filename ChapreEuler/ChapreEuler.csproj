@@ -13,10 +13,17 @@
 
   <ItemGroup>
     <Folder Include="Problems\27\" />
+    <Folder Include="Problems\43\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="Problems\22\names.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Problems\42\words.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Problems\54\poker.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
